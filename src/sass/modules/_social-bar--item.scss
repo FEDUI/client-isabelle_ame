@@ -1,17 +1,18 @@
 .social-bar--item {
 	z-index: 2;
+	padding: .2em;
+	transition: .5s;
+	transform: scale(1);
 	
-	/*
-	ToDo: hover action;
-
-	&:hover, 
-	&:focus {
-	
-	}
-	*/
-
 	img {
 		max-width: 50px;
 		padding: 0.3em 0em;
+	}
+
+	&:hover, &:focus {
+		img {
+			transform: scale(1.1);
+			transform-origin: 50% 50%;
+		}
 	}
 }

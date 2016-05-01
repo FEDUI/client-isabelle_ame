@@ -4,8 +4,10 @@
 	flex-direction: column;
 	justify-content: flex-start;
 
+	/*background-image: url("../img/symbol.jpg");*/
+
 	h2 {
-		font-size: 1.11em;
+		font-size: 1.3em;
 		color: $secondary-color;
 		margin: 0;
 		padding-top: 1em;
@@ -16,12 +18,12 @@
 	}
 	a:not(:last-of-type) { /* not the button */
 		align-self: flex-start;
-		font-size: 1.2em;
+		font-size: 1em;
 		font-family: sans-serif;
 	}
 
 	.event-button {
 		display: block;
-		align-self: center;
+		align-self: flex-start;
 	}
 }

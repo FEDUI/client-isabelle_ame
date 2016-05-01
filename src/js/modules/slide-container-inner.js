@@ -2,15 +2,24 @@ slideContainer = {};
 
 slideContainer.start = function() {
 
-	setTimeout(function() {
+	var dataCheck = setInterval(function() {
+		
+		if( window.dataReady === true ) {
+			clearInterval(dataCheck);
+			slideContainer.setAfterInterval();
+		}
 
-		var allHTML = slideContainer.getAllHTML();	
-		slideContainer.addListeners(allHTML);
-		slideContainer.onLoad();
-
-	}, 800);
+	}, 50);
 
 }
+
+slideContainer.setAfterInterval = function() {
+
+	var allHTML = slideContainer.getAllHTML();	
+	slideContainer.addListeners(allHTML);
+	slideContainer.onLoad();
+
+};
 
 slideContainer.getAllHTML = function() {
 
@@ -108,6 +117,18 @@ slideContainer.addListeners = function(allHTML) {
 
 slideContainer.onLoad = function() {
 
+	var dataCheck = setInterval(function() {
+		
+		if( window.dataReady === true ) {
+			clearInterval(dataCheck);
+			slideContainer.setDataHash();
+		}
+
+	}, 50);
+
+}
+
+slideContainer.setDataHash = function() {
 	var allItems = slideContainer.getAllHTML();
 	var hash = window.location.hash.slice(1);
 	var container = document.querySelector('.main-content');
@@ -119,7 +140,6 @@ slideContainer.onLoad = function() {
 	} else if ( hash == "contact" ) {
 		container.innerHTML = allItems.contact;
 	}	
-
 }
 
 module.exports = slideContainer;

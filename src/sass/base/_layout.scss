@@ -1,3 +1,15 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -11,12 +23,15 @@ main {
 	width: 90vw;
 	margin-left: 0;
 	margin-bottom: 1em;
+	margin-top: 1em;
+
+	animation: fadeIn 1s forwards;
 	
 	@media(min-width: $bp-one) {
 		margin: 0 auto;
 		padding: 0;
 		width: calc(100vw - #{$aside-width});
-		margin-left: calc(#{$aside-width} + 1rem);
+		margin-left: calc(#{$aside-width} + 1.5rem);
 		margin-bottom: 1em;
 	}
 }
