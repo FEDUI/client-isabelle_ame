@@ -1,3 +1,12 @@
-# FEDUI Framework
+# Isabelle Ame
+## SASS
+As the FEDUI Framework.
 
-The Framework from FEDUI (Cobalt) uses SASS and GULP, in combination with the cobalt.js mirco lib.
+## JS
+A OOP setup.
+
+## HTML
+The HTML is buil by using modular parts. You can include a moduele by using 
+```
+@@include(filename)
+```
