@@ -1,0 +1,61 @@
+@keyframes toLeft {
+	0% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}	
+}
+@keyframes toRight {
+	0% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(100%);
+		opacity: 0;
+	}	
+}
+@keyframes fromLeft {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}	
+}
+@keyframes fromRight {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}	
+}
+
+
+
+
+.js-set {
+	position: relative;
+}
+
+.hide-main-item-left {
+	animation: toRight .3s forwards;
+}
+.hide-main-item-right {
+	animation: toLeft .3s forwards;
+}
+
+.show-main-item-left {
+	animation: fromLeft .3s forwards;
+}
+.show-main-item-right {
+	animation: fromRight .3s forwards;
+}

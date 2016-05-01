@@ -1,0 +1,26 @@
+.underscore-link {
+	text-decoration: none;
+
+	transition: .3s;
+	position: relative;
+	color: $white;
+
+	&:after {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+		width: 0;
+		height: 3px;
+		background-color: $white;
+		content: "";
+		transition: width 0.2s;
+	}
+
+	&:hover, 
+	&:focus {
+		&:after {
+			width: 100%;
+		}
+	}
+}

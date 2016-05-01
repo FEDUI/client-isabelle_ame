@@ -1,0 +1,17 @@
+header {
+	padding: 0 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center; 
+	min-width: 100%;
+
+	h1 {
+		margin: 0;
+		color: $white;
+		@include large;
+		@media(min-width: $bp-one) {
+			@include xxlarge;
+		}
+	}
+}

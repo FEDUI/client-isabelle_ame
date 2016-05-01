@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: space-between;
+}
+main {
+	padding: 0;
+	width: 90vw;
+	margin-left: 0;
+	margin-bottom: 1em;
+	
+	@media(min-width: $bp-one) {
+		margin: 0 auto;
+		padding: 0;
+		width: calc(100vw - #{$aside-width});
+		margin-left: calc(#{$aside-width} + 1rem);
+		margin-bottom: 1em;
+	}
+}
+header {
+	width: calc(100vw - #{$aside-width});
+	margin-left: $aside-width;
+}

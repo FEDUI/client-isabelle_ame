@@ -1,0 +1,17 @@
+.social-bar--item {
+	z-index: 2;
+	
+	/*
+	ToDo: hover action;
+
+	&:hover, 
+	&:focus {
+	
+	}
+	*/
+
+	img {
+		max-width: 50px;
+		padding: 0.3em 0em;
+	}
+}

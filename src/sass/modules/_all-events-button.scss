@@ -1,0 +1,14 @@
+.event-button {
+	font-family: $calendar-font;
+	font-size: 1.25em;
+	padding: .3em .7em;
+	margin-top: 2em;
+    color: $secondary-color;
+	transition: .3s;
+    background-color: rgba(242,242,242,0.6);
+
+    &:hover, 
+    &:focus {
+		background-color: rgba(242,242,242,1);
+    }
+}

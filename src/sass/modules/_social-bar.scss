@@ -1,0 +1,23 @@
+.social-bar {
+	position: fixed;
+	left: -80px;
+	top: 0;
+	height: 100vh;
+	max-width: $aside-width;
+
+	padding: 0 .7em;
+	z-index: 1;
+
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+
+	nav {
+		vertical-align: middle;
+	}
+
+	@media(min-width: $bp-one) {
+		left: 0px;
+	}
+}

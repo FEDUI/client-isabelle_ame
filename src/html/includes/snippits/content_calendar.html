@@ -1,0 +1,26 @@
+<section class="calendar" id="shows">
+
+</section>
+
+<script id="template-calendar" type="text/x-handlebars-template">
+
+	<ul class="calendar-list">
+		{{#each this}}
+			<li class="calendar-list--item {{class}}">
+				<a href="{{link}}" target="_blank">
+					<div class="date">
+						<span class="month">{{month}}</span>
+						<span class="day">{{day}}</span>
+					</div>
+					<div class="location">
+						<h2 class="title">{{title}}</h2>
+						<p class="detail">{{location_name}} / {{location_city}}</p>
+					</div>
+				</a>				
+			</li>
+		{{/each}}		
+	</ul>
+
+	<a href="https://www.facebook.com/isabelleame/events" class="event-button">Bekijk alle evenemeten</a>
+
+</script>

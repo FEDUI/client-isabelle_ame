@@ -1,0 +1,23 @@
+/* 
+Fonts
+*/
+$prime-font: "Courier New", "Open Sans", "Helvetica", "Arial", Sans-Serif;
+$secondary-font: "Marck Script", cursive; /* "The Skinny" */
+$calendar-font: "Montserrat";
+
+body {
+	font-family: $prime-font;
+	color: $font;
+	line-height: 1.7;
+}
+
+h1 {
+	@include xxlarge;
+	font-family: $secondary-font;
+}
+h2, h3 {
+	@include large;
+}
+h4, p, a {
+	@include medium;
+}

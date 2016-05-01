@@ -1,0 +1,23 @@
+// Custom
+/*$scheme: (
+	#5C7D8C,
+	#ACC0A5,
+	#BD9174,
+	#A89F98,
+	#F2E1C7
+);*/
+$scheme: (
+	rgba(92, 125, 140, .5),
+	rgba(172, 192, 165, .5),
+	#4B2B2F,
+	#A89F98,
+	#F2E1C7
+);
+$prime-color: nth($scheme, 2);
+$secondary-color: nth($scheme, 3);
+$accent-color: nth($scheme, 2);
+
+// Basic
+$black: #000;
+$white: #EDEEE8;
+$font: #565656;

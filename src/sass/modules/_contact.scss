@@ -1,0 +1,27 @@
+#contact {
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	h2 {
+		font-size: 1.11em;
+		color: $secondary-color;
+		margin: 0;
+		padding-top: 1em;
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+	a:not(:last-of-type) { /* not the button */
+		align-self: flex-start;
+		font-size: 1.2em;
+		font-family: sans-serif;
+	}
+
+	.event-button {
+		display: block;
+		align-self: center;
+	}
+}
