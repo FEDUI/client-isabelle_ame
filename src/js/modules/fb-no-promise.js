@@ -59,7 +59,9 @@ facebookCalendar.reorderData = function(data) {
 	var nameLength = 20;	
 	if ( containerWidth > 400 && containerWidth < 500 ) {
 		nameLength = 30;
-	} else if ( containerWidth > 500 && containerWidth < 700 ) {
+	} else if ( containerWidth > 500 && containerWidth < 600 ) {
+		nameLength = 35;
+	} else if ( containerWidth > 600 && containerWidth < 700 ) {
 		nameLength = 40;
 	} else if ( containerWidth > 700 ) {
 		nameLength = 50;
