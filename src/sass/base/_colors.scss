@@ -2,13 +2,14 @@
 $scheme: (
 	rgba(92, 125, 140, .5),
 	rgba(172, 192, 165, .5),
-	#643017,
-	#FA6746,
-	#F2E1C7
+	#364668,
+	#C2DAF6,
+	#F2E1C7,
+	#3F5676
 );
-$prime-color: nth($scheme, 2);
+$prime-color: nth($scheme, 3);
 $secondary-color: nth($scheme, 3);
-$accent-color: nth($scheme, 2);
+$accent-color: nth($scheme, 4);
 
 // Basic
 $black: #000;

@@ -23,5 +23,9 @@
 		height: 100vh;
 		left: 0px;
 		top: 1.2em;
+
+		ul {
+			flex-direction: column;
+		}
 	}
 }

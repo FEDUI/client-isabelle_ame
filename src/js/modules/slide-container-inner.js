@@ -3,10 +3,10 @@ slideContainer = {};
 slideContainer.start = function() {
 
 	var dataCheck = setInterval(function() {
-		
+
 		if( window.dataReady === true ) {
-			clearInterval(dataCheck);
 			slideContainer.setAfterInterval();
+			clearInterval(dataCheck);
 		}
 
 	}, 50);
@@ -54,6 +54,8 @@ slideContainer.set = function(e) {
 		newValue = 2;
 	} else if ( newHash == "contact" ) {
 		newValue = 3;
+	} else {
+		newValue = 1;
 	}
 
 	if ( oldHash == "video" ) {
@@ -62,6 +64,8 @@ slideContainer.set = function(e) {
 		oldValue = 2;
 	} else if ( oldHash == "contact" ) {
 		oldValue = 3;
+	} else {
+		oldValue = 1;
 	}
 
 	if ( oldValue > newValue ) {
@@ -116,15 +120,8 @@ slideContainer.addListeners = function(allHTML) {
 }
 
 slideContainer.onLoad = function() {
-
-	var dataCheck = setInterval(function() {
-		
-		if( window.dataReady === true ) {
-			clearInterval(dataCheck);
-			slideContainer.setDataHash();
-		}
-
-	}, 50);
+	
+	slideContainer.setDataHash();
 
 }
 
@@ -139,7 +136,9 @@ slideContainer.setDataHash = function() {
 		container.innerHTML = allItems.shows;
 	} else if ( hash == "contact" ) {
 		container.innerHTML = allItems.contact;
-	}	
+	} else {
+		container.innerHTML = allItems.video;
+	}
 }
 
 module.exports = slideContainer;

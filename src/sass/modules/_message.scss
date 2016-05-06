@@ -1,0 +1,27 @@
+.message {
+	position: fixed;
+	top: calc(100vh - 4em);
+	background-color: rgba($accent-color, 0.6);
+	box-shadow: 2px 2px 4px rgba(100, 100, 100, .4);
+	padding: .3em .5em;
+	overflow: hidden;
+	height: 1.6em;
+	color: $secondary-color;
+	color: #364668;
+	font-weight: 800;
+	text-align: center;
+	width: 17em;
+
+	transition: .5s;
+	right: -18em;
+
+	span {
+		width: 14em;
+	}
+}
+.open {
+	right: 0em;
+}
+.close {
+	right: -18em;
+}
