@@ -144,8 +144,10 @@ facebookCalendar.checkIfPast = function(gigData) {
 	var _gigData = gigData;
 
 	var today = new Date();
-	var todayNumber = Date.parse(today);
-	var gigDataNumber = Date.parse(_gigData);
+	today = today.toISOString();
+
+	var todayNumber = today.slice(0, 4) + today.slice(5, 7) + today.slice(8, 10);
+	var gigDataNumber = _gigData.slice(0, 4) + _gigData.slice(5, 7) + _gigData.slice(8, 10);
 
 	if ( gigDataNumber < todayNumber ) {
 			

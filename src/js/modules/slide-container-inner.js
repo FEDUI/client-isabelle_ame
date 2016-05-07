@@ -45,7 +45,6 @@ slideContainer.set = function(e) {
 	var oldValue;
 	var newHTML = e.target.jsHtml;
 	var container = document.querySelector('.main-content');
-
 	var oldSection = document.querySelector('.main-content section');
 
 	if ( newHash == "video" ) {
@@ -104,8 +103,6 @@ slideContainer.addListeners = function(allHTML) {
 	var menuLinks = document.querySelectorAll('.main-menu .stay');
 	Array.prototype.forEach.call(menuLinks, function(link) {
 
-		link.addEventListener('click', slideContainer.set, false);
-
 		var linkId = link.hash.slice(1);
 		if ( linkId == "video" ) {
 			link.jsHtml = _allHTML.video;
@@ -114,6 +111,9 @@ slideContainer.addListeners = function(allHTML) {
 		} else if ( linkId == "contact" ) {
 			link.jsHtml = _allHTML.contact;
 		}
+
+		link.addEventListener('touchstart', slideContainer.set, false);
+		link.addEventListener('click', slideContainer.set, false);
 
 	});
 

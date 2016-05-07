@@ -1,15 +1,11 @@
-/*body {
-	background-image: url('../img/isabelle-purple.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
-	background-position: center;
-}*/
 html {
 	background-image: url("../img/isabelle-purple.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    background-position: center;
+
+	@media(min-width: $bp-one) {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		height: 100vh;
+		background-position: center;
+	}
 }
