@@ -17,15 +17,15 @@ facebookCalendar.getData = function() {
 	var data;
 
 	var getAccesUrl = "https://graph.facebook.com/oauth/access_token?client_id=" + key.id + "&client_secret=" + key.secret + "&grant_type=client_credentials";
-	nanoajax.ajax({url: getAccesUrl}, function(response, responseText) { 
+	nanoajax.ajax({url: getAccesUrl}, function(response, responseText) {
 
 		if (response) {
 
 			accessToken = responseText;
 
 			var accesUrl = "https://graph.facebook.com/" + key.user + "/?fields=events&" + accessToken;
-			
-			nanoajax.ajax({url: accesUrl}, function(response, responseText) { 
+
+			nanoajax.ajax({url: accesUrl}, function(response, responseText) {
 
 				if (response) {
 
@@ -55,8 +55,8 @@ facebookCalendar.reorderData = function(data) {
 	var lastEventsNumber = 3;
 
 	var containerWidth = document.querySelector('section.calendar').offsetWidth;
-	
-	var nameLength = 20;	
+
+	var nameLength = 20;
 	if ( containerWidth > 400 && containerWidth < 500 ) {
 		nameLength = 30;
 	} else if ( containerWidth > 500 && containerWidth < 600 ) {
@@ -80,34 +80,37 @@ facebookCalendar.reorderData = function(data) {
 			} else {
 				gig.title = _this.name;
 			}
-			
+
 		} else {
-			gig.title = "Onbekend";
+			gig.title = " ";
 		}
 
 		if ( _this.place ) {
-			gig.link = "https://www.facebook.com/events/" + _this.id;	
+			gig.link = "https://www.facebook.com/events/" + _this.id;
 		} else {
 			gig.link = "";
 		}
-		
+
 		if ( _this.place ) {
 
-			if ( (_this.name.length + _this.place.location.city.length) > 25 ) {
-				gig.location_name = facebookCalendar.cutString(_this.place.name, 14);
-			} else {
-				gig.location_name = _this.place.name;
+			if (_this.place.location) {
+
+				if ( (_this.name.length + _this.place.location.city.length) > 25 ) {
+					gig.location_name = facebookCalendar.cutString(_this.place.name, 14);
+				} else {
+					gig.location_name = _this.place.name;
+				}
 			}
 
-			
+
 		} else {
-			gig.location_name = "Onbekend";
+			gig.location_name = " ";
 		}
 
 		if ( _this.place && _this.place.location ) {
 			gig.location_city = _this.place.location.city;
 		} else {
-			gig.location_city = "Onbekend";
+			gig.location_city = " ";
 		}
 
 		if ( _this.start_time ) {
@@ -120,7 +123,7 @@ facebookCalendar.reorderData = function(data) {
 			gig.class = facebookCalendar.checkIfPast(gigData);
 
 		}
-		
+
 		if ( gig.class == "past" ) {
 			pastFbEvents.push(gig);
 		} else {
@@ -150,11 +153,11 @@ facebookCalendar.checkIfPast = function(gigData) {
 	var gigDataNumber = _gigData.slice(0, 4) + _gigData.slice(5, 7) + _gigData.slice(8, 10);
 
 	if ( gigDataNumber < todayNumber ) {
-			
+
 		return "past";
 
 	} else {
-		
+
 		return "upcomming";
 
 	}
@@ -175,7 +178,7 @@ facebookCalendar.cutString = function(stringValue, amount) {
 facebookCalendar.setMonth = function(number) {
 
 	var _number = number;
-	
+
 	if ( _number.charAt(0) == 0 ) {
 		_number = _number.charAt(1);
 	}

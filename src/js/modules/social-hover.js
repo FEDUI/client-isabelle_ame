@@ -32,15 +32,15 @@ socialHover.getMessage = function(id) {
 	var _id = id;
 
 	if( _id == "facebook" ) {
-		return "Follow me on Facebook";
+		return "Volg me op Facebook";
 	} else if ( _id == "twitter" ) {
-		return "Read my tweets";
+		return "Lees mijn tweets";
 	} else if ( _id == "itunes" ) {
-		return "Listen to my music";
+		return "Luister naar mijn muziek";
 	} else if ( _id == "instagram" ) {
-		return "Watch my pictures";
+		return "Volg me op Instagram";
 	}  else if ( _id == "youtube" ) {
-		return "Watch my clips";
+		return "Abonneer op mijn video's";
 	}
 
 };
